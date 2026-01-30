@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Cognito Form</title>
-    <style> /* your styles */ </style>
+    <title>Cognito Seamless Test</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; height: 100vh; overflow: hidden; }
+        header { background: #f0f0f0; padding: 20px; text-align: center; margin-bottom: 20px; position: sticky; top: 0; z-index: 10; }
+        iframe { width: 100%; height: calc(100vh - 140px); border: none; }
+    </style>
 </head>
 <body>
 <header>
     <h1>Cognito Form Embed</h1>
-    <p>Click below to view your submission</p>
+    <p>Viewing submission...</p>
 </header>
 
-<div style="text-align: center; padding: 40px;">
-    <a href="https://www.cognitoforms.com/KAVACRM/TESTBusinessPackageProposalForm#jITw982tceNAVY4Q3QGKMQnbvITdWP5UHH5ImnV38qA$*"
-       style="background: #007cba; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px;">
-        View Submission →
-    </a>
-</div>
+<!-- KEY FIXES for Cognito auth in iframe -->
+<iframe
+        src="https://www.cognitoforms.com/KAVACRM/TESTBusinessPackageProposalForm#jITw982tceNAVY4Q3QGKMQnbvITdWP5UHH5ImnV38qA$*"
+        referrerpolicy="no-referrer"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        allow="payment *">
+</iframe>
 </body>
 </html>
